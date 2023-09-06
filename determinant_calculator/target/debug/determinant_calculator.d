@@ -1,0 +1,1 @@
+D:\School\ Supplies\WSU\2023\ Fall\CS450-MachineLearning\Project1\determinant_calculator\target\debug\determinant_calculator.exe: D:\School\ Supplies\WSU\2023\ Fall\CS450-MachineLearning\Project1\determinant_calculator\src\main.rs

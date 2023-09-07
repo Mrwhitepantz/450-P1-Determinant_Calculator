@@ -1,0 +1,1 @@
+C:\Users\Mrwhi\Documents\School\ Supplies\WSU\2023\ Fall\DTC\ 478\450-P1-Determinant_Calculator\determinant_calculator\target\release\determinant_calculator.exe: C:\Users\Mrwhi\Documents\School\ Supplies\WSU\2023\ Fall\DTC\ 478\450-P1-Determinant_Calculator\determinant_calculator\src\main.rs

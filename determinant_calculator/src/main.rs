@@ -34,53 +34,7 @@ fn main() -> io::Result<()> {
 	println!("-----------------");
 
 	println!("Starting Triangularization");
-	
-	for i in 0..n {
-		println!("Column: {i}");
-		let mut max: f64 = 0.0;
-		let mut max_index = 0;
-		for (index,row) in matrix_rows.iter_mut().enumerate() {
-			if index >= i{
-				println!("Checking for max at [{index}, {i}]");
-				if row[i] > max {
-					println!("New max found");
-					max = row[i];
-					max_index = index
-				}
-			}	
-		}
-		println!("Column max index: {max_index} needs to be in row {i}");
-		if max_index != i {
-			println!("swapping row {max_index} with row {i}");
-			matrix_rows.swap(i,max_index);
-			determinant *= -1.0;
-		}
-		println!("");
-		println!("Starting Scaling");
-		for (index, row) in matrix_rows.iter_mut().enumerate() {
-			println!("Index: {index} i: {i}");
-		    if index > i {
-				println!("index greater than i");
-				let scale_factor = row[i]/ *(&mut matrix_rows[i][i]);
-				println!("scale factor: {} / {} = {}", row[i], &mut matrix_rows[i][i],scale_factor);
-				for (j, mut col) in row.iter().enumerate() {
-					println!("changing [{index}, {j}]");
-					println!("should be {col} - {scale_factor}*{}",&mut matrix_rows[i][j]);
-					matrix_rows[index][j] = col - scale_factor* (*(&mut matrix_rows[i][j]));
-					println!("now is: {}",&mut matrix_rows[index][j]);
-				}
-			}
-		}
 
-		println!("New Matrix:");
-		for row in &matrix_rows {
-			print!("[ ");
-			for col in row {
-				print!("{col} ");
-			}
-			println!("]");
-		}
-	}
 
 	for (col,row) in matrix_rows.iter().enumerate() {
 		println!("{col}:{}",row[col]);
